@@ -10,6 +10,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Java.Lang;
+using System.Globalization;
 
 namespace TidePredictionClasses
 {
@@ -17,7 +18,7 @@ namespace TidePredictionClasses
     {
         List<Tides> tides;
        Java.Lang.Object[] sectionsObjects;
-        List<int> secIndex = new List<int>();
+        List<string> secIndex = new List<string>();
         Activity context;
 
         public TidesAdapter(Activity con, List<Tides> tidelist) : base()
@@ -71,29 +72,25 @@ namespace TidePredictionClasses
 
         private void BuildSectionIndex()
         {
-
+            int i = 0;
             sectionsObjects = new Java.Lang.Object[tides.Count];
             foreach (Tides tide in tides)
             {
-                secIndex.Add(tide.Index);
+                secIndex.Add(CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(tide.Index));
+                sectionsObjects[i++] = new Java.Lang.String(CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(tide.Index));
             }
 
-            for (int i = 0; i<tides.Count;i++)
-            {
-                sectionsObjects[i] = new Java.Lang.Integer(secIndex[i]);
-
-            }
         }
 
 
         public int GetPositionForSection(int sectionIndex)
         {
-            return secIndex.IndexOf(sectionIndex);
+            return sectionIndex;
         }
 
         public int GetSectionForPosition(int position)
         {
-            return secIndex[position];
+            return position;
         }
 
         public Java.Lang.Object[] GetSections()
