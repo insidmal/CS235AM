@@ -55,6 +55,9 @@ namespace Pig
 			// aapt resource value: 0x7f050002
 			public const int scorelabelcolor = 2131034114;
 			
+			// aapt resource value: 0x7f050003
+			public const int turnlabelcolor = 2131034115;
+			
 			static Color()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();

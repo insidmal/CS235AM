@@ -3,5 +3,6 @@
     <color name="labelcolor">#FF0000</color>
   <color name="edittextcolor">#FFFFFF</color>
   <color name="scorelabelcolor">#0000FF</color>
+  <color name="turnlabelcolor">#000000</color>
 
 </resources>

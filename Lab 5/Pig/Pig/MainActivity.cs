@@ -16,6 +16,7 @@ namespace Pig
         List<TextView> gameScore = new List<TextView>();
         Die d;
         int turnsleft = 1;
+        const int MAXSCORE = 100;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -48,13 +49,8 @@ namespace Pig
                     //if the turn ended on the roll, rolled 8
                     if (endTurn == true)
                     {
-                        if (playerTurn == player.Count - 1 && player.Any(z => z.GameScore >= 100))
+                        if (!CheckWinner(player))
                         {
-                            AnnounceWinner(player);
-                        }
-                        else
-                        {
-
                             UpdateDisplayScores(player);
                             playerTurn = NextPlayer(playerTurn, player);
                         }
@@ -68,11 +64,7 @@ namespace Pig
                 if (activegame == true)
                 {
                     gameScore[playerTurn].Text = player[playerTurn].UpdateGameScore().ToString();
-                    if (playerTurn == player.Count - 1 && player.Any(z => z.GameScore >= 20))
-                    {
-                        AnnounceWinner(player);
-                    }
-                    else
+                    if (!CheckWinner(player))
                     {
                         playerTurn = NextPlayer(playerTurn, player);
                     }
@@ -98,6 +90,9 @@ namespace Pig
         /// <returns>Game Die</returns>
         public Die StartGame(int diceSides, out List<Player> player)
         {
+            var turnLabel = FindViewById<TextView>(Resource.Id.turnLabel);
+            turnLabel.Text = "Player 1\'s Turn";
+
             player = new List<Player>();
             player.Add(new Player());
             player.Add(new Player());
@@ -119,6 +114,15 @@ namespace Pig
             turnLabel.Text = "Player " + turn + "\'s Turn";
             UpdateTurnScore(0);
             return playerTurn;
+        }
+
+        public bool CheckWinner(List<Player> player)
+        {
+            if (playerTurn == player.Count - 1 && player.Any(z => z.GameScore >= MAXSCORE)) {
+                AnnounceWinner(player);
+                return true;
+            }
+            else return false;
         }
 
         public void AnnounceWinner(List<Player> player)

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/frameLayout1"
+    android:foregroundGravity="center"
+    android:background="@drawable/pigbg">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight=".2">
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/PlayerLabel1"
+                android:id="@+id/playerLabel1"
+                android:textColor="@color/labelcolor"
+                android:gravity="center"
+                android:layout_marginTop="20dp" />
+            <EditText
+                android:id="@+id/Player1Text"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/edittextcolor" />
+            <TextView
+                android:id="@+id/Player1ScoreLabel"
+                android:layout_height="wrap_content"
+                android:layout_width="150dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/scoreText"
+                android:layout_below="@+id/Player1Text"
+                android:textColor="@color/scorelabelcolor"
+                android:gravity="center" />
+            <TextView
+                android:id="@+id/Player1ScoreValue"
+                android:layout_height="wrap_content"
+                android:layout_width="150dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="0"
+                android:textColor="@color/scorelabelcolor"
+                android:gravity="center"
+                android:background="@drawable/back" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight=".6">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/turnText"
+                android:textColor="@color/turnlabelcolor"
+                android:id="@+id/turnLabel"
+                android:gravity="center" />
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="80dp"
+                android:id="@+id/diceRoll"
+                android:src="@drawable/Die8Side8"
+                android:layout_marginBottom="0.0dp"
+                android:layout_marginTop="10dp" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/turnPointsText"
+                android:textColor="@color/labelcolor"
+                android:id="@+id/turnPointsLabel"
+                android:gravity="center"
+                android:layout_marginTop="10dp" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="0"
+                android:textColor="@color/scorelabelcolor"
+                android:id="@+id/turnPointsValue"
+                android:gravity="center"
+                android:background="@drawable/back" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/rollDieButton"
+                    android:text="@string/RollButtonText"
+                    android:layout_width="wrap_content"
+                    android:layout_weight=".5"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/primary_text_dark" />
+                <Button
+                    android:id="@+id/endTurnButton"
+                    android:text="@string/EndTurnText"
+                    android:layout_width="wrap_content"
+                    android:layout_weight=".5"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/primary_text_dark" />
+            </LinearLayout>
+            <Button
+                android:id="@+id/endGameButton"
+                android:text="@string/NewGameText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/primary_text_dark" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight=".2">
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/PlayerLabel2"
+                android:textColor="@color/labelcolor"
+                android:id="@+id/playerLabel2"
+                android:gravity="center"
+                android:layout_marginTop="20dp" />
+            <EditText
+                android:id="@+id/Player2Text"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/edittextcolor" />
+            <TextView
+                android:id="@+id/Player2ScoreLabel"
+                android:layout_height="wrap_content"
+                android:layout_width="150dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/scoreText"
+                android:textColor="@color/scorelabelcolor"
+                android:gravity="center" />
+            <TextView
+                android:id="@+id/Player2ScoreValue"
+                android:layout_height="wrap_content"
+                android:layout_width="150dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="0"
+                android:textColor="@color/scorelabelcolor"
+                android:gravity="center"
+                android:background="@drawable/back" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
