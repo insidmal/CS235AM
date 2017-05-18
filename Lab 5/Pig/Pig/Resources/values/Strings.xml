@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Hello">Hello World, Click Me!</string>
+    <string name="ApplicationName">Pig</string>
+  <string name ="PlayerLabel1">Player 1</string>
+  <string name ="PlayerLabel2">Player 2</string>
+  <string name ="scoreText">Score</string>
+  <string name ="turnText">Player 1\'s Turn</string>
+  <string name ="turnPointsText">Points for this Turn</string>
+
+
+  <string name ="RollButtonText">Roll Die</string>
+  <string name ="EndTurnText">End Turn</string>
+  <string name ="NewGameText">New Game</string>
+
+</resources>

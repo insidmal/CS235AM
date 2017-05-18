@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/frameLayout1"
+    android:foregroundGravity="center"
+    android:background="@drawable/pigbg">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/PlayerLabel1"
+            android:id="@+id/playerLabel1"
+            android:textColor="@color/labelcolor"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:gravity="center" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/PlayerLabel2"
+            android:textColor="@color/labelcolor"
+            android:id="@+id/playerLabel2"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center" />
+        <EditText
+            android:id="@+id/Player1Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/playerLabel1"
+            android:layout_alignRight="@+id/playerLabel1"
+            android:textColor="@color/edittextcolor"
+            android:layout_below="@+id/playerLabel1" />
+        <EditText
+            android:id="@+id/Player2Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/playerLabel2"
+            android:layout_alignRight="@+id/playerLabel2"
+            android:textColor="@color/edittextcolor"
+            android:layout_below="@+id/playerLabel2" />
+        <TextView
+            android:id="@+id/Player1ScoreLabel"
+            android:layout_alignLeft="@+id/playerLabel1"
+            android:layout_alignRight="@+id/playerLabel1"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/scoreText"
+            android:layout_below="@+id/Player1Text"
+            android:textColor="@color/scorelabelcolor"
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/Player2ScoreLabel"
+            android:layout_alignLeft="@+id/playerLabel2"
+            android:layout_alignRight="@+id/playerLabel2"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/scoreText"
+            android:layout_below="@+id/Player2Text"
+            android:textColor="@color/scorelabelcolor"
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/Player1ScoreValue"
+            android:layout_alignLeft="@+id/Player1ScoreLabel"
+            android:layout_alignRight="@+id/Player1ScoreLabel"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="0"
+            android:layout_below="@+id/Player1ScoreLabel"
+            android:textColor="@color/scorelabelcolor"
+            android:gravity="center"
+            android:background="@drawable/back" />
+        <TextView
+            android:id="@+id/Player2ScoreValue"
+            android:layout_alignLeft="@+id/Player2ScoreLabel"
+            android:layout_alignRight="@+id/Player2ScoreLabel"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="0"
+            android:layout_below="@+id/Player2ScoreLabel"
+            android:textColor="@color/scorelabelcolor"
+            android:gravity="center"
+            android:background="@drawable/back" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/turnText"
+            android:textColor="@color/labelcolor"
+            android:id="@+id/turnLabel"
+            android:layout_below="@+id/Player1ScoreValue"
+            android:gravity="center"
+            android:layout_marginTop="20dp" />
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="80dp"
+            android:id="@+id/diceRoll"
+            android:src="@drawable/Die8Side8"
+            android:layout_below="@+id/turnLabel"
+            android:gravity="center"
+            android:layout_marginBottom="0.0dp"
+            android:layout_marginTop="30dp" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/turnPointsText"
+            android:textColor="@color/labelcolor"
+            android:id="@+id/turnPointsLabel"
+            android:layout_below="@+id/diceRoll"
+            android:gravity="center"
+            android:layout_marginTop="20dp" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="0"
+            android:textColor="@color/scorelabelcolor"
+            android:id="@+id/turnPointsValue"
+            android:layout_below="@+id/turnPointsLabel"
+            android:gravity="center"
+            android:background="@drawable/back" />
+        <Button
+            android:id="@+id/rollDieButton"
+            android:text="@string/RollButtonText"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/turnPointsValue"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp" />
+        <Button
+            android:id="@+id/endTurnButton"
+            android:text="@string/EndTurnText"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/turnPointsValue"
+            android:layout_toRightOf="@+id/rollDieButton"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp" />
+        <Button
+            android:id="@+id/endGameButton"
+            android:text="@string/NewGameText"
+            android:layout_width="325dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rollDieButton"
+            android:layout_marginLeft="15dp" />
+    </RelativeLayout>
+</FrameLayout>

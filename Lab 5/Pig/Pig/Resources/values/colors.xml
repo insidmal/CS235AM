@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="labelcolor">#FF0000</color>
+  <color name="edittextcolor">#FFFFFF</color>
+  <color name="scorelabelcolor">#0000FF</color>
+
+</resources>
