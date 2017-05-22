@@ -23,17 +23,20 @@ namespace Pig
             SetContentView(Resource.Layout.Main);
             var p1Label = FindViewById<TextView>(Resource.Id.playerLabel1);
 
-            if(p1Label!=null)
+            if(p1Label==null)
             {
 
-                var game = new Intent(this, typeof(MainActivity));
+                var game = new Intent(this, typeof(SplashActivity));
+                game.PutExtra("dual", false);
                 StartActivity(game);
 
             }
             else
             {
 
-                var game = new Intent(this, typeof(SplashActivity));
+                var game = new Intent(this, typeof(MainActivity));
+                game.PutExtra("dual", true);
+
                 StartActivity(game);
             }
             // Create your application here

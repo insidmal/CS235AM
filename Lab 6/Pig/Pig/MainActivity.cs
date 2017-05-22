@@ -29,11 +29,39 @@ namespace Pig
         string p1Name;
         string p2Name;
 
+        protected override void OnResume()
+        {
+            base.OnResume();
+            if (Intent.HasExtra("p1Name"))
+            {
+                var p1Label = FindViewById<TextView>(Resource.Id.playerLabel1);
+                var p2Label = FindViewById<TextView>(Resource.Id.playerLabel2);
+
+
+
+                p1Label.Text = Intent.Extras.GetString("p1Name");
+                p2Label.Text = Intent.Extras.GetString("p2Name");
+            }
+        }
+
         protected override void OnCreate(Bundle bundle)
         {
 
             base.OnCreate(bundle);
-            SetContentView(Resource.Layout.Main);
+            
+
+            var dual = Intent.Extras.GetBoolean("dual");
+            if (dual == true) SetContentView(Resource.Layout.Main);
+            else SetContentView(Resource.Layout.GameLayout);
+
+            var startButton = FindViewById<Button>(Resource.Id.StartButton);
+
+
+            var p1Data = FindViewById<EditText>(Resource.Id.p1Value);
+            var p2Data = FindViewById<EditText>(Resource.Id.p2Value);
+
+
+
 
             var rollDieButton = FindViewById<Button>(Resource.Id.rollDieButton);
             var endTurnButton = FindViewById<Button>(Resource.Id.endTurnButton);
@@ -92,9 +120,6 @@ namespace Pig
 
 
             //get data from splash fragment
-            var startButton = FindViewById<Button>(Resource.Id.StartButton);
-            var p1Data = FindViewById<EditText>(Resource.Id.p1Value);
-            var p2Data = FindViewById<EditText>(Resource.Id.p2Value);
 
             if (startButton != null)
             {

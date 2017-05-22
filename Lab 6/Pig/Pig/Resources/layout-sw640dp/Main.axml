@@ -8,21 +8,21 @@
     android:id="@+id/frameLayout1"
     android:foregroundGravity="center"
     android:background="@drawable/pigbg">
-    <LinearLayout
-        android:orientation="vertical"
+  <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+    <fragment
+        android:id="@+id/SplashFrag"
+        android:name="Pig.TopFrag"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <fragment
-            android:id="@+id/SplashFrag"
-            android:name="Pig.TopFrag"
-            android:layout_width="match_parent"
-            android:layout_weight=".5"
-            android:layout_height="wrap_content" />
-        <fragment
-            android:id="@+id/GameFrag"
-            android:name="Pig.GameFrag"
-            android:layout_width="match_parent"
-            android:layout_weight=".5"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
+        android:layout_weight=".5"
+        android:layout_height="wrap_content" />
+    <fragment
+        android:id="@+id/GameFrag"
+        android:name="Pig.GameFrag"
+        android:layout_width="match_parent"
+        android:layout_weight=".5"
+        android:layout_height="wrap_content" />
+  </LinearLayout>
 </FrameLayout>

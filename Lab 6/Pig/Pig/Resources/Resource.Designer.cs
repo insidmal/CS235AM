@@ -136,14 +136,14 @@ namespace Pig
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f070016
-			public const int GameFrag = 2131165206;
-			
-			// aapt resource value: 0x7f07000f
-			public const int InstructionLabel = 2131165199;
-			
 			// aapt resource value: 0x7f070010
-			public const int Player1NameLabel = 2131165200;
+			public const int GameFrag = 2131165200;
+			
+			// aapt resource value: 0x7f070011
+			public const int InstructionLabel = 2131165201;
+			
+			// aapt resource value: 0x7f070012
+			public const int Player1NameLabel = 2131165202;
 			
 			// aapt resource value: 0x7f070003
 			public const int Player1ScoreLabel = 2131165187;
@@ -151,8 +151,8 @@ namespace Pig
 			// aapt resource value: 0x7f070005
 			public const int Player1ScoreValue = 2131165189;
 			
-			// aapt resource value: 0x7f070012
-			public const int Player2NameLabel = 2131165202;
+			// aapt resource value: 0x7f070014
+			public const int Player2NameLabel = 2131165204;
 			
 			// aapt resource value: 0x7f070004
 			public const int Player2ScoreLabel = 2131165188;
@@ -160,11 +160,11 @@ namespace Pig
 			// aapt resource value: 0x7f070006
 			public const int Player2ScoreValue = 2131165190;
 			
-			// aapt resource value: 0x7f070015
-			public const int SplashFrag = 2131165205;
+			// aapt resource value: 0x7f07000f
+			public const int SplashFrag = 2131165199;
 			
-			// aapt resource value: 0x7f070014
-			public const int StartButton = 2131165204;
+			// aapt resource value: 0x7f070016
+			public const int StartButton = 2131165206;
 			
 			// aapt resource value: 0x7f07000b
 			public const int buttons = 2131165195;
@@ -181,11 +181,11 @@ namespace Pig
 			// aapt resource value: 0x7f070000
 			public const int frameLayout1 = 2131165184;
 			
-			// aapt resource value: 0x7f070011
-			public const int p1Value = 2131165201;
-			
 			// aapt resource value: 0x7f070013
-			public const int p2Value = 2131165203;
+			public const int p1Value = 2131165203;
+			
+			// aapt resource value: 0x7f070015
+			public const int p2Value = 2131165205;
 			
 			// aapt resource value: 0x7f070001
 			public const int playerLabel1 = 2131165185;

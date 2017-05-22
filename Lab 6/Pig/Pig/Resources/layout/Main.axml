@@ -8,56 +8,14 @@
     android:id="@+id/frameLayout1"
     android:foregroundGravity="center"
     android:background="@drawable/pigbg">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <TextView
-            android:id="@+id/InstructionLabel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/Rules"
-            android:textColor="@color/turnlabelcolor"
-            android:layout_margin="15dp" />
-        <TextView
-            android:id="@+id/Player1NameLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_centerInParent="true"
-            android:layout_marginLeft="15dp"
-            android:layout_below="@+id/InstructionLabel"
-            android:text="Player 1 Name:" />
-        <EditText
-            android:id="@+id/p1Value"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/Player1NameLabel"
-            android:layout_alignLeft="@+id/Player1NameLabel"
-            android:layout_alignRight="@+id/Player1NameLabel"
-            android:hint="@string/PlayerLabel1" />
-        <TextView
-            android:id="@+id/Player2NameLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerInParent="true"
-            android:layout_marginRight="15dp"
-            android:layout_below="@+id/InstructionLabel"
-            android:text="Player 2 Name:" />
-        <EditText
-            android:id="@+id/p2Value"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/Player2NameLabel"
-            android:layout_alignLeft="@+id/Player2NameLabel"
-            android:layout_alignRight="@+id/Player2NameLabel"
-            android:hint="@string/PlayerLabel2" />
-        <Button
-            android:id="@+id/StartButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/p1Value"
-            android:layout_margin="15dp"
-            android:text="@string/StartGameText" />
-    </RelativeLayout>
+
+  <fragment
+      android:id="@+id/SplashFrag"
+      android:name="Pig.TopFrag"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent" />
+
 </FrameLayout>
+
+
+
