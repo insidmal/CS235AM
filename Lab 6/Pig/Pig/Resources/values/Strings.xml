@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Hello">Hello World, Click Me!</string>
+    <string name="ApplicationName">Pig</string>
+  <string name ="PlayerLabel1">Player 1</string>
+  <string name ="PlayerLabel2">Player 2</string>
+  <string name ="scoreText">Score</string>
+  <string name ="turnText">Player 1\'s Turn</string>
+  <string name ="turnPointsText">Points for this Turn</string>
+
+
+  <string name ="RollButtonText">Roll Die</string>
+  <string name ="EndTurnText">End Turn</string>
+  <string name ="NewGameText">New Game</string>
+  <string name ="StartGameText">Start Game</string>
+  <string name ="P1Name">Player 1 Name:</string>
+  <string name ="P2Name">Player 2 Name:</string>
+
+
+  <string name ="Rules">How To Play:  Each Player takes turns rolling the die.  Each roll adds to your turn score.  When you end your turn, your turn score is added to your total.  If an 8 is rolled, the turn score is set to zero and the turn is ended, with the player receiving no points.  The game ends when all players have ahd ther turn and a score is above 100, the highest scoring player wins.</string>
+
+
+</resources>
