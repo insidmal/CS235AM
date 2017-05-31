@@ -2,4 +2,6 @@
 <resources>
     <string name="Hello">Hello World, Click Me!</string>
     <string name="ApplicationName">TidePrediction</string>
+  <string name="InstText">Select a Location and Date Below</string>
+
 </resources>

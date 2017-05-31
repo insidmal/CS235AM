@@ -54,30 +54,59 @@ namespace TideDBClasses
             db.Close();
         }
 
-        public Tides Retrieve(int id)
+        public TideDB Retrieve(int id)
         {
             Connect();
-            Tides t = db.Get<Tides>(id);
+            TideDB t = db.Get<TideDB>(id);
+            
             db.Close();
             return t;
         }
 
-        public List<Tides> RetrieveLocale(string locale)
+        public List<TideDB> RetrieveLocale(string locale)
         {
             Connect();
             string qry = "select * from Tides where locale='?'";
             string[] para = new string[1] { locale };
-            List<Tides> t = db.Query<Tides>(qry, para);
+            List<TideDB> t = db.Query<TideDB>(qry, para);
             db.Close();
             return t;
         }
 
-        public List<Tides> RetrieveAll()
+        public List<TideDB> RetrieveTide(string locale, string date)
+        {
+            Connect();
+            string qry = "select * from Tides where locale=? and date=?  order by (case when Time like '% am' then 1 else 2 end), Time";
+            var t = db.Query<TideDB>(qry, new string[2] { locale, date });
+            db.Close();
+            return t;
+        }
+
+
+        public List<TideDB> RetrieveLocales()
+        {
+            Connect();
+            string qry = "select distinct(Locale) from Tides order by Locale Asc";
+            var t = db.Query<TideDB>(qry, new string[1]);
+            db.Close();
+            return t;
+        }
+        
+        public List<TideDB> RetrieveDates()
+        {
+            Connect();
+            string qry = "select distinct(Date) from Tides order by Date Asc";
+            var t = db.Query<TideDB>(qry, new string[1]);
+            db.Close();
+            return t;
+        }
+
+        public List<TideDB> RetrieveAll()
         {
             Connect();
             string qry = "select * from Tides order by locale asc";
-            List<Tides> t = new List<Tides>();
-            t = db.Query<Tides>(qry, null);
+            List<TideDB> t = new List<TideDB>();
+            t = db.Query<TideDB>(qry, null);
             db.Close();
             return t;
 
@@ -101,7 +130,7 @@ namespace TideDBClasses
 
             string qry = "SELECT COUNT(ID) FROM tblActivities WHERE [Activity] = 'Sleeping'";
             Connect();
-                int count = Convert.ToInt32(db.Query<Tides>(qry,null));
+                int count = Convert.ToInt32(db.Query<TideDB>(qry,null));
             db.Close();
             return count;
             }

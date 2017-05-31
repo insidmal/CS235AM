@@ -3,5 +3,18 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:layout_margin="15dp">
+    <TextView
+        android:id="@+id/InstText"
+        android:text="@string/InstText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="15dp" />
+    <Spinner
+        android:id="@+id/SpinSelect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp" />
 </LinearLayout>

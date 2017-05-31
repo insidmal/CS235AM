@@ -36,24 +36,52 @@ namespace XMLtoSQLLiteConverter
 
             }
 
-            tideDb.Create();
+            //tideDb.Create();
 
-            int ind = 0;
-            foreach (Tides tide in tides)
-            {
-                tide.ID = ind++;
-                tideDb.AddEntry(tide);
-            }
+            //int ind = 0;
+            //foreach (Tides tide in tides)
+            //{
+            //    tide.ID = ind++;
+            //    tideDb.AddEntry(tide);
+            //}
 
 
             Console.WriteLine(tides.Count());
 
-            for (int ind2 = ind; ind2 > -1; ind2--)
+            for (i = 0; i < 5; i++)
             {
-                Console.WriteLine(tideDb.Retrieve(ind2).Feet);
+                Console.WriteLine(i);
+                Console.WriteLine(tideDb.Retrieve(i).Feet);
             }
+            Console.WriteLine("Tide Locales");
+
+            foreach (TideDB tideL in tideDb.RetrieveLocales())
+            {
+                Console.WriteLine(tideL.Locale);
+            }
+
+            Console.WriteLine("Tide Dates");
+
+            //cut this off at 10 entries to save space
+            i = 0;
+            foreach (TideDB tideD in tideDb.RetrieveDates())
+            {
+                Console.WriteLine(tideD.Date);
+                if (i++ > 10) break;
+            }
+
+            //select a locale and date
+            Console.WriteLine("Tide for Deopoe Bay, 2017/01/23");
+            foreach (TideDB tide in tideDb.RetrieveTide("Depoe Bay", "2017/01/23"))
+            {
+                Console.WriteLine(tide.HL + " of " + tide.Cen + " at " + tide.Time);
+            }
+
             Console.ReadLine();
             Console.WriteLine();
         }
+
+
+        
     }
 }

@@ -58,6 +58,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\TidesDB.s3db" />
     <None Include="GettingStarted.Xamarin" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
@@ -75,6 +76,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TideDB\TideDBClasses.csproj">
+      <Project>{cf829fe6-9368-4db0-9cdb-b54b5f6f452d}</Project>
+      <Name>TideDBClasses</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TidePredictionClasses\TidePredictionClasses.csproj">
+      <Project>{feb307bd-3cb6-452c-b3ad-f2bf203ede16}</Project>
+      <Name>TidePredictionClasses</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
