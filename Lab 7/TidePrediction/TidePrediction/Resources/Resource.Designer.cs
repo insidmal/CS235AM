@@ -67,6 +67,18 @@ namespace TidePrediction
 			// aapt resource value: 0x7f050001
 			public const int SpinSelect = 2131034113;
 			
+			// aapt resource value: 0x7f050002
+			public const int datePick = 2131034114;
+			
+			// aapt resource value: 0x7f050005
+			public const int dateText = 2131034117;
+			
+			// aapt resource value: 0x7f050004
+			public const int locationText = 2131034116;
+			
+			// aapt resource value: 0x7f050003
+			public const int submit = 2131034115;
+			
 			static Id()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -82,6 +94,9 @@ namespace TidePrediction
 			
 			// aapt resource value: 0x7f030000
 			public const int Main = 2130903040;
+			
+			// aapt resource value: 0x7f030001
+			public const int tidelayout = 2130903041;
 			
 			static Layout()
 			{
@@ -107,6 +122,9 @@ namespace TidePrediction
 			
 			// aapt resource value: 0x7f040000
 			public const int app_name = 2130968576;
+			
+			// aapt resource value: 0x7f040004
+			public const int subText = 2130968580;
 			
 			static String()
 			{

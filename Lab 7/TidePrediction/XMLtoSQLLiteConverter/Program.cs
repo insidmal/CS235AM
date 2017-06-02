@@ -64,7 +64,7 @@ namespace XMLtoSQLLiteConverter
 
             //cut this off at 10 entries to save space
             i = 0;
-            foreach (TideDB tideD in tideDb.RetrieveDates())
+            foreach (TideDB tideD in tideDb.RetrieveDates(0))
             {
                 Console.WriteLine(tideD.Date);
                 if (i++ > 10) break;
@@ -76,7 +76,8 @@ namespace XMLtoSQLLiteConverter
             {
                 Console.WriteLine(tide.HL + " of " + tide.Cen + " at " + tide.Time);
             }
-
+            Console.WriteLine("Minimum Date: " + tideDb.RetrieveDates(-1)[0].Date.Replace("/", ""));
+            Console.WriteLine("Maximum Date: " + tideDb.RetrieveDates(1)[0].Date.Replace("/", ""));
             Console.ReadLine();
             Console.WriteLine();
         }
