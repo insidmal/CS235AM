@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Hello">Hello World, Click Me!</string>
+    <string name="ApplicationName">Upcoming Events</string>
+  <string name="EventLabel">Your Next Item:</string>
+  <string name="EditButton">Edit This Event</string>
+  <string name="DoneButton">Mark Event as Done</string>
+  <string name="ViewButton">View Remaining Events</string>
+  <string name="ViewDoneButton">View Completed Events</string>
+  <string name="ViewDetailsButton">View Event Details</string>
+  <string name="ItemLable">Event Details:</string>
+  <string name="DeleteButton">Delete Event</string>
+  <string name="AddButton">Add New Event</string>
+  <string name="NameLabel">Event Name:</string>
+  <string name="DueLabel">Due by:</string>
+  <string name="WhereLabel">Where:</string>
+  <string name="WithLabel">With:</string>
+  <string name="ExtraLabel">Details:</string>
+  <string name="AddInstrLabel">Add a New Event</string>
+  <string name="UpdateButton">Update Event</string>
+</resources>

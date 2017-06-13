@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".5">
+        <TextView
+            android:id="@+id/eventInstruct"
+            android:text="@string/EventLabel"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" />
+        <TextView
+            android:id="@+id/itemName"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="15dp" />
+        <TextView
+            android:id="@+id/itemDue"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="15dp" />
+        <TextView
+            android:id="@+id/itemExtra"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="15dp" />
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".5">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/ViewDetailsButton"
+                android:text="@string/ViewDetailsButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#95a5a6"
+                android:layout_margin="5dp" />
+            <Button
+                android:id="@+id/DoneButton"
+                android:text="@string/DoneButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#2ecc71"
+                android:layout_margin="5dp" />
+            <Button
+                android:id="@+id/EditButton"
+                android:text="@string/EditButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#16a085"
+                android:layout_margin="5dp" />
+            <Button
+                android:id="@+id/ViewButton"
+                android:text="@string/ViewButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f1c40f"
+                android:layout_margin="5dp" />
+            <Button
+                android:id="@+id/ViewDoneButton"
+                android:text="@string/ViewDoneButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f39c12"
+                android:layout_margin="5dp" />
+            <Button
+                android:id="@+id/AddButton"
+                android:text="@string/AddButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#2980b9"
+                android:layout_margin="5dp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

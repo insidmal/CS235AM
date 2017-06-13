@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".6"
+            android:minWidth="25px"
+            android:minHeight="25px">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayout2">
+                <TextView
+                    android:id="@+id/NameLabel"
+                    android:text="@string/NameLabel"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" />
+                <EditText
+                    android:id="@+id/NameText"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" />
+                <TextView
+                    android:id="@+id/WhereLabel"
+                    android:text="@string/WhereLabel"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" />
+                <EditText
+                    android:id="@+id/WhereText"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" />
+                <TextView
+                    android:id="@+id/WithLabel"
+                    android:text="@string/WithLabel"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" />
+                <EditText
+                    android:id="@+id/WithText"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" />
+                <TextView
+                    android:id="@+id/ExtraLabel"
+                    android:text="@string/ExtraLabel"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" />
+                <EditText
+                    android:id="@+id/ExtraText"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" />
+            </LinearLayout>
+        </ScrollView>
+        <ScrollView
+            android:layout_weight=".4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/DueLabel"
+                    android:text="@string/DueLabel"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" />
+                <DatePicker
+                    android:id="@+id/DatePicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:spinnersShown="true"
+                    android:datePickerMode="spinner"
+                    android:calendarViewShown="false"
+                    android:layout_weight="5"
+                    android:scaleX="0.7"
+                    android:scaleY="0.7"
+                    android:layout_marginLeft="-30dp"
+                    android:layout_marginRight="-30dp" />
+                <TimePicker
+                    android:id="@+id/TimePicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:timePickerMode="spinner"
+                    android:layout_weight="5"
+                    android:scaleX="0.7"
+                    android:scaleY="0.7"
+                    android:layout_marginLeft="-30dp"
+                    android:layout_marginRight="-30dp" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <Button
+        android:id="@+id/AddButton"
+        android:text="@string/UpdateButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2980b9"
+        android:layout_margin="5dp" />
+</LinearLayout>
